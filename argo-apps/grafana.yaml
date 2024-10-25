@@ -12,6 +12,8 @@ spec:
     helm:
       valuesObject:
         namespaceOverride: "grafana"
+        service:
+          port: 7890
   destination:
     server: "https://kubernetes.default.svc" 
     namespace: grafana 
