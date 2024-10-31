@@ -13,7 +13,7 @@ spec:
       valuesObject:
         namespaceOverride: "nginx"
         service:
-          type: ClusterIP
+          type: NodePort 
           ports:
             http: 5678
   destination:
