@@ -14,10 +14,11 @@ spec:
         namespaceOverride: "monitoring"
         service:
           type: ClusterIP 
-        ingress:
-          enabled: true
-          hosts: ["prometheus.test"]
-        baseURL: "prometheus.test"
+        server:
+          ingress:
+            enabled: true
+            hosts: ["prometheus.test"]
+          baseURL: "prometheus.test"
   destination:
     server: "https://kubernetes.default.svc" 
     namespace: monitoring 
