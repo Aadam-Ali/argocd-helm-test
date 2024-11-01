@@ -17,7 +17,7 @@ spec:
           port: 7890
         ingress:
           enabled: true
-          hosts: ["grafana.example"]
+          hosts: ["grafana.test"]
   destination:
     server: "https://kubernetes.default.svc" 
     namespace: grafana 

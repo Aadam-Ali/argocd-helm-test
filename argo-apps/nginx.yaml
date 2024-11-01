@@ -18,7 +18,7 @@ spec:
             http: 5678
         ingress:
           enabled: true
-          hostname: hello-world.example
+          hostname: nginx.test
   destination:
     server: "https://kubernetes.default.svc" 
     namespace: nginx
