@@ -13,7 +13,11 @@ spec:
       valuesObject:
         namespaceOverride: "grafana"
         service:
+          type: NodePort
           port: 7890
+        ingress:
+          enabled: true
+          hosts: ["grafana.example"]
   destination:
     server: "https://kubernetes.default.svc" 
     namespace: grafana 
