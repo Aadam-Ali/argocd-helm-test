@@ -17,7 +17,14 @@ spec:
           port: 7890
         ingress:
           enabled: true
-          hosts: ["grafana.test"]
+          hosts: ["grafana.ci-dev.uktrade.digital"]
+          annotations:
+            alb.ingress.kubernetes.io/scheme: internet-facing
+            alb.ingress.kubernetes.io/target-type: ip
+            alb.ingress.kubernetes.io/group.name: aadam-argo
+            alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+            alb.ingress.kubernetes.io/ssl-redirect: '443'
+            external-dns.alpha.kubernetes.io/hostname: grafana.ci-dev.uktrade.digital
   destination:
     server: "https://kubernetes.default.svc" 
     namespace: monitoring 
