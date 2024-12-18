@@ -11,6 +11,8 @@ spec:
     targetRevision: 25.28.0 
     helm:
       valuesObject:
+        alertmanager:
+          enabled: false
         namespaceOverride: "monitoring"
         service:
           type: ClusterIP 
