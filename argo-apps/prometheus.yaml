@@ -12,8 +12,6 @@ spec:
     helm:
       valuesObject:
         namespaceOverride: "monitoring"
-        persistentVolume:
-          enabled: false
         service:
           type: ClusterIP 
         server:
@@ -29,6 +27,8 @@ spec:
             alb.ingress.kubernetes.io/ssl-redirect: '443'
             external-dns.alpha.kubernetes.io/hostname: prometheus.ci-dev.uktrade.digital
           baseURL: "prometheus.ci-dev.uktrade.digital"
+          persistentVolume:
+            enabled: false
   destination:
     server: "https://kubernetes.default.svc" 
     namespace: monitoring 
