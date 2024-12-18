@@ -12,7 +12,8 @@ spec:
     helm:
       valuesObject:
         configmapReload:
-          enabled: false
+          prometheus:
+            enabled: false
         alertmanager:
           enabled: false
         namespaceOverride: "monitoring"
