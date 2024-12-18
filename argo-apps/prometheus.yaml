@@ -11,6 +11,8 @@ spec:
     targetRevision: 25.28.0 
     helm:
       valuesObject:
+        configmapReload:
+          enabled: false
         alertmanager:
           enabled: false
         namespaceOverride: "monitoring"
