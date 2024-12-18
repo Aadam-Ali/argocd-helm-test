@@ -16,6 +16,7 @@ spec:
           type: ClusterIP 
           port: 7890
         ingress:
+          ingressClassName: alb
           enabled: true
           hosts: ["grafana.ci-dev.uktrade.digital"]
           annotations:

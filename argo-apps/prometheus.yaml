@@ -16,6 +16,7 @@ spec:
           type: ClusterIP 
         server:
           ingress:
+            ingressClassName: alb
             enabled: true
             hosts: ["prometheus.ci-dev.uktrade.digital"]
             annotations:
