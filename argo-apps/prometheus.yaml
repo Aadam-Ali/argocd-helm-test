@@ -17,6 +17,8 @@ spec:
         service:
           type: ClusterIP 
         server:
+          extraArgs:
+            --web.enable-lifecycle
           ingress:
             ingressClassName: alb
             enabled: true
