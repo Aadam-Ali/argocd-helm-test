@@ -12,6 +12,8 @@ spec:
     helm:
       valuesObject:
         namespaceOverride: "monitoring"
+        persistentVolume:
+          enabled: false
         service:
           type: ClusterIP 
         server:
