@@ -25,12 +25,12 @@ spec:
             enabled: true
             hosts: ["prometheus.ci-dev.uktrade.digital"]
             annotations:
-            alb.ingress.kubernetes.io/scheme: internet-facing
-            alb.ingress.kubernetes.io/target-type: ip
-            alb.ingress.kubernetes.io/group.name: default
-            alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
-            alb.ingress.kubernetes.io/ssl-redirect: '443'
-            external-dns.alpha.kubernetes.io/hostname: prometheus.ci-dev.uktrade.digital
+              alb.ingress.kubernetes.io/scheme: internet-facing
+              alb.ingress.kubernetes.io/target-type: ip
+              alb.ingress.kubernetes.io/group.name: default
+              alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+              alb.ingress.kubernetes.io/ssl-redirect: '443'
+              external-dns.alpha.kubernetes.io/hostname: prometheus.ci-dev.uktrade.digital
           baseURL: "prometheus.ci-dev.uktrade.digital"
           persistentVolume:
             enabled: false
