@@ -20,6 +20,7 @@ spec:
         service:
           type: ClusterIP 
         server:
+          tcpSocketProbeEnabled:
           ingress:
             ingressClassName: alb
             enabled: true
@@ -32,6 +33,7 @@ spec:
               alb.ingress.kubernetes.io/ssl-redirect: '443'
               external-dns.alpha.kubernetes.io/hostname: prometheus.ci-dev.uktrade.digital
           baseURL: "prometheus.ci-dev.uktrade.digital"
+          prefixURL: "prometheus.ci-dev.uktrade.digital"
           persistentVolume:
             enabled: false
   destination:
